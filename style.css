@@ -1,0 +1,241 @@
+*{
+    font-family: monospace;
+}
+
+body {
+    color: rgb(245, 241, 241);
+    background-color: rgb(13, 13, 14);
+
+}
+
+h1 {
+    color: rgb(127, 218, 99)
+}
+
+.barradenavegacion nav a {
+    color: #f7faf8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+/*Esto es un comentario*/
+.barradenavegacion {
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.barradenavegacion a{
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.barradenavegacion a:hover{
+    background-color: #044b39;
+    color: white;
+}
+
+.barradenavegacion div a {
+    color: #39e66d;
+    border: 1px solid #39e66d;
+    padding: 8px 16px;
+    border-radius: 8px; 
+    margin: 5px;
+}
+
+
+.primeraseccion{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("./background.webp");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+
+}
+
+.primeraseccion h1 {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil al texto */
+}
+
+.primeraseccion p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    color: #e5e7eb; /* Blanco grisáceo para el subtítulo */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.primeraseccion form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    padding: 10px 40px 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Obliga a los desplegables a renderizarse por encima de todo */
+}
+.primeraseccion form input{
+    flex: 1;
+    border-radius: 25px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.primeraseccion form button{
+    position: absolute;
+    right: 50px;
+}
+
+
+/*Empleos*/.
+
+/*Echo por IA*/
+
+/* 1. Contenedor general de todo el formulario (Unificado) */
+.segundoformulario {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;              
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+/* 2. La barra principal limpia (Sin las 3 repeticiones) */
+.search-main-bar {
+    position: relative;     /* Permite que el botón absoluto se alinee RESPECTO a esta barra */
+    display: flex;
+    align-items: center;
+    height: 48px;           /* Altura fija de la barra */
+    background-color: white;
+    border: 1px solid #ccc; /* Agregamos el borde para que se note el límite de la esquina */
+    border-radius: 25px;    /* Esquinas redondeadas de la barra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding-right: 120px;   /* Protege el texto para que no choque con el botón */
+}
+
+/* 3. El campo de texto */
+.search-main-bar input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+/* 4. El botón verde perfectamente acoplado a la esquina derecha */
+.search-main-bar button {
+    position: absolute;
+    right: 4px;             /* Espacio mínimo para pegarlo bien a la esquina derecha */
+    top: 50%;               /* Lo baja al 50% de la barra */
+    transform: translateY(-50%); /* Lo centra verticalmente de forma matemática */
+    
+    height: 40px;           /* Al medir 40px dentro de una barra de 48px, llena casi todo el alto */
+    padding: 0 18px;
+    background-color: #096418; /* Tu color verde */
+    color: white;
+    border: none;
+    border-radius: 21px;    /* Ajustado para que su curva copie de forma idéntica la esquina de la barra */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 5. Fila de filtros desplegables */
+.search-filters {
+    display: flex;
+    gap: 12px; 
+    width: 100%;
+}
+
+/* 6. Estilo estético para los menús desplegables */
+.search-filters select {
+    flex: 1;             
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;  
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+/* Efecto visual cuando el usuario hace clic en un filtro */
+.search-filters select:focus {
+    border-color: #0076d6;
+}
+
+.search-main-bar button {
+    position: absolute !important;
+    right: 0 !important;      /* Totalmente pegado al borde derecho, sin aire */
+    top: 0 !important;        /* Pegado al techo de la barra */
+    bottom: 0 !important;     /* Pegado al piso de la barra */
+    transform: none !important; /* Eliminamos el translateY anterior */
+    
+    height: 100% !important;  /* Ocupa exactamente el mismo alto que la barra blanca */
+    width: 120px !important;  /* Ancho ideal para que quepan la lupa y el texto cómodamente */
+    
+    background-color: #096418; 
+    color: white;
+    border: none;
+    
+    /* TRUCO MAESTRO: Las esquinas izquierdas quedan rectas (0) y las derechas copian los 25px de la barra */
+    border-radius: 0 25px 25px 0 !important; 
+    
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/*Echo por IA*/
+
+
+/*Por qué nosotros*/
+
+.segundaseccion header {
+    text-align: center;
+}
+
+article {
+    background-color: #0a2b0c;
+    padding: 2rem;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+    
+.piedepagina {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr; /*columnas del grid*/
+}
+
+
+
