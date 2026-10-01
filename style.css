@@ -238,4 +238,48 @@ article {
 }
 
 
+.ofertas {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    button{
+        background-color: #041108;
+        color: white;
+        border-radius: 5px;
+        padding: 25px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+    }
+    button:hover{
+        background-color:#044b39;
+    }
+}
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 2rem;
+
+    a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 3 rem;
+    height: 3rem;
+    padding: 5px;
+
+    &:hover {
+        background-color: rgb(21, 136, 50);
+    }
+
+    &.is-active{
+        background-color: #096418;
+        pointer-events: none;
+    }
+    }
+
+}
